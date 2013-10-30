@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require foundation.min
+//= require custom.modernizr
+//= require zepto
