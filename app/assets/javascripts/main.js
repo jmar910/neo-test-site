@@ -46,10 +46,11 @@ $(function() {
         }, 5000);
     };
 
+    //Call image fader function
+    imageFader();
+
     //Call functions for input and textarea 
 	textFieldClear('.contact-content input[type="text"]');
 	textFieldClear('.contact-content textarea');
 
-    //Call image fader function
-    imageFader();
 });

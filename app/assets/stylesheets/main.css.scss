@@ -67,6 +67,8 @@ body {
 /* Container for image fader */
 .iphone-graphics .image-fader {
 	height:425px;
+	width: 390px;
+	margin: auto;
 }
 
 .description {
@@ -78,6 +80,8 @@ body {
 		color:rgb(206,206,200);
 		font-family: "Open Sans", sans-serif;
 		font-weight: 300;
+		padding-right: 95px;
+		margin-bottom: 0;
 	}
 
 	h2 {
@@ -179,6 +183,11 @@ body {
 @media only screen and (max-width: 767px) {
 	.description {
 		padding-top:55px;
+		text-align:center;
+
+		p {
+			padding-right:0;
+		}
 	}
 	.iphone-graphics {
 		padding-left:0;
