@@ -63,6 +63,7 @@ body {
 		/* Remove extra pixel at bottom of 2nd 
 		and 3rd iphone images */
 		height:425px;
+		max-width:none;
 	}
 }
 
@@ -195,5 +196,18 @@ body {
 		padding-left:0;
 		padding-right:0;
 
+	}
+}
+
+/* Remove padding and margins when resizing in order to fit iphone and
+desription on page */ 
+@media only screen and (max-width: 1023px) {
+	.large-9.large-offset-2.columns.iphone-graphics {
+		margin-left:0;
+		padding-left:0;
+	}
+
+	.description p {
+		padding-right:0;
 	}
 }
