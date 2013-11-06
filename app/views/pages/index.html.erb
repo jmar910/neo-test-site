@@ -83,13 +83,14 @@
   <!-- This nested grid structure is used for alignment and separation of styling classes (.contact/.contact-content) --> 
   <div class="row contact">
     <div class="large-10 large-centered columns contact-content">
-      <form name="contact-form" action="" method="post">
+      <form name="contact-form" id="GIT-form" action="" method="get">
         <div class="row">
           <div class="large-6 columns">
             <h2>Get In Touch!</h2>
-            <input name="first" type="text" value="First Name">
-            <input name="last" type="text" value="Last Name">
-            <input name="company" type="text" value="Company Name">
+            <input name="first" type="text" value="First Name" required>
+            <input name="last" type="text" value="Last Name" required>
+            <input name="company" type="text" value="Company Name" required>
+            <input name="email" type="email" value="Email" required>
           </div>
           <div class="large-6 columns">
             <textarea name="comments">Any additional details that you would like to share with us?</textarea>
@@ -100,6 +101,19 @@
            <input class="small button secondary" type="submit">
           </div>
       </form>
+      <script>
+        $("#GIT-form").validate({
+          onfocusout: false,
+          onkeyup: false,
+          focusInvalid: false,
+          rules: {
+            first: "noDefaultVals",
+            last: "noDefaultVals",
+            company: "noDefaultVals",
+            comments: "noDefaultVals"
+          }
+        });
+      </script>
     </div>
   </div>
   <!-- End contact form -->

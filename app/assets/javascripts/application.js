@@ -17,3 +17,4 @@
 //= require foundation.min
 //= require custom.modernizr
 //= require zepto
+//= require jquery.validate

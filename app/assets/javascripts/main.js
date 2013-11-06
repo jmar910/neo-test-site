@@ -57,6 +57,15 @@ $(function() {
             }
         });
     }
+
+    //Custom validation rules
+    jQuery.validator.addMethod("noDefaultVals", function (value, element) {
+        var defVal = element.defaultValue;
+        return element.value !== defVal;
+    }, 'This field is required.');
+
+
+
     //Call image fader function
     imageFader();
 

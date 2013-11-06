@@ -142,7 +142,7 @@ body {
 		text-shadow:0px 2px 4px #000000;
 	}
 
-	input[type="text"] {
+	input[type="text"], input[type="email"] {
 		background: rgba(0, 0, 0, 0);
 		box-shadow: none;
 		outline: none;
@@ -178,6 +178,13 @@ body {
 		font-size: 1.125em;
 		font-weight: 600;
 		color: rgb(126,147,56);
+	}
+
+	/* Override foundation .error class textarea styling caused 
+	by jquery validation error handling */
+	textarea.error:focus {
+		background: rgb(145,168,69);
+		border:1px solid rgb(145,168,69);
 	}
 
 }
