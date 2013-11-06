@@ -4,27 +4,24 @@ $(function() {
 	function textFieldClear(selector){
 		var storeDefault;
 
-    	$(selector).focus(function(){
-            //Store the default value of the current selected input
-    		storeDefault = $(this).prop('defaultValue');
+        $(selector).keydown(function(){
+            storeDefault = $(this).prop('defaultValue');
 
-            //On focus, check if current value is equal to default value
-            //If it is, clear placeholder and change styling for user input
-    		if($(this).val() == storeDefault){
-    			$(this).val('');
-    			$(this).css('color', 'white');
-    		}
+            if($(this).val() == storeDefault){
+                $(this).val('');
+                $(this).css('color', 'white');
+            }
+        });
 
-    		$(selector).blur(function(){
-                //If field is empty, revert back to default value and
-                //remove any styling that was added
-    			if($(this).val() == ""){
-    				$(this).val(storeDefault);
-    				$(this).removeAttr('style');
-				}
-    		});
-		});
-	}
+        $(selector).blur(function(){
+            //If field is empty, revert back to default value and
+            //remove any styling that was added
+            if($(this).val() == ""){
+                $(this).val(storeDefault);
+                $(this).removeAttr('style');
+            }
+        });
+    }
 
     //Quick and dirty image fader
     function imageFader() {
@@ -70,7 +67,7 @@ $(function() {
     imageFader();
 
     //Call functions for input and textarea 
-	textFieldClear('.contact-content input[type="text"]');
+	textFieldClear('.contact-content input[type="text"], input[type="email"]');
 	textFieldClear('.contact-content textarea');
 
     //Call hamburger click function
