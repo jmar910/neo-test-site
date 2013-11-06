@@ -46,11 +46,25 @@ $(function() {
         }, 5000);
     };
 
+    //Toggle nav on hamburger click
+    function toggleNav() {
+        $('#hamburger').click(function(){
+            if($('.nav').hasClass('hide-for-small')){
+                $('.nav').removeClass('hide-for-small');
+            }
+            else{
+                $('.nav').addClass('hide-for-small');
+            }
+        });
+    }
     //Call image fader function
     imageFader();
 
     //Call functions for input and textarea 
 	textFieldClear('.contact-content input[type="text"]');
 	textFieldClear('.contact-content textarea');
+
+    //Call hamburger click function
+    toggleNav();
 
 });

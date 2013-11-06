@@ -1,13 +1,13 @@
 <body>
   <!-- Begin Header and Logo -->
   <div class="row header">
-    <div class="large-4 push-4 columns header-content" id="logo"><%=image_tag('logo.png')%></div>
-    <div class="large-3 columns header-content"><%=image_tag('menu-icon.png')%></div>
+    <div class="large-4 large-offset-4 small-4 small-offset-4 columns header-content" id="logo"><%=image_tag('logo.png')%></div>
+    <div class="large-3 small-4 columns header-content show-for-small"><a id="hamburger"><%=image_tag('menu-icon.png')%></a></div>
   </div>
   <!-- End Header and Logo -->
 
   <!-- Begin Nav bar/links -->
-  <div class="row nav">
+  <div class="row nav hide-for-small">
     <div class="large-9 large-centered columns"><!-- Nested grid structure for margins on left & right of links-->
       <div class="row">
         <!-- Separate links in nested grid -->
